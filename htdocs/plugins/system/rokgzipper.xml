@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system">
+	<name>System - RokGZipper</name>
+	<author>RocketTheme</author>
+	<creationDate>April 2008</creationDate>
+	<copyright>Copyright (C) 2008 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>www.rockettheme.com</authorUrl>
+	<version>1.0</version>
+	<description>Plugin to gzip-bundle js and css files</description>
+	<files>
+		<filename plugin="rokgzipper">rokgzipper.php</filename>
+	</files>
+	<params>
+	    <param name="cache_time" type="text" default="900" label="Cacehe Time in Secs" description="" />
+	</params>
+</install>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+  <name>Joomla Flash Uploader</name>
+  <creationDate>Mai 2009</creationDate>
+  <author>Michael Dempfle</author>
+  <copyright>This plugin is freeeware</copyright>
+  <authorEmail>jfu@mdempfle.de</authorEmail>
+  <authorUrl>jfu.tinywebgallery.com</authorUrl>
+   <version>2.9</version>
+  <description>This is the plugin for the Joomla Flash Uploader component. Make sure this component is installed! Please read the help of the component how to use this plugin!</description>
+  <files>
+    <filename plugin="joomla_flash_uploader">joomla_flash_uploader.php</filename>
+  </files>
+</install>

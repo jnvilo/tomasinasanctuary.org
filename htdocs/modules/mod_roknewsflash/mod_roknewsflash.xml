@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>RokNewsflash News</name>
+	<author>RocketTheme</author>
+	<creationDate>December 2007</creationDate>
+	<copyright>(C) 2007 RocketTheme. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>www.rockettheme.com</authorUrl>
+	<version>1.5</version>
+	<description><![CDATA[
+	<h2>RokNewsflash Module</h2>
+	<p>Newsflash module created for rt_mediamogul template</p>
+	]]></description>
+	<files>
+		<filename module="mod_roknewsflash">mod_roknewsflash.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>roknewsflash-packed.js</filename>
+		<folder>tmpl/</folder>
+	</files>
+	<params>
+		<param name="type" type="list" default="0" label="Module Mode" description="Allows you to control which type of Content to display in the module">
+			<option value="1">Content Items only</option>
+			<option value="2">Static Content only</option>
+			<option value="3">Both</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="show_front" type="radio" default="1" label="Frontpage Items" description="Show/Hide items designated for the Frontpage - only works when in Content Items only mode">
+			<option value="1">show</option>
+			<option value="0">hide</option>
+		</param>
+		<param name="count" type="text" default="5" label="Count" description="The number of items to display (default 5)" />
+		<param name="catid" type="mos_category" default="" label="Category" description="Selects items from a specific Category." />
+		<param name="secid" type="mos_section" default="" label="Section" description="Selects items from a specific Secion." />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="jslib" type="radio" default="true" label="Include Mootools JS Library" description="Select whether to include the JS lib as part of this module, Select No if the template already loads this">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="usetitle" type="radio" default="0" label="Use Title or IntroText" description="Display output as the title or introtext" >
+			<option value="1">Title</option>
+			<option value="0">IntroText</option>
+		</param>
+		<param name="pretext" type="text" default="Newsflash:" label="PreText Label" description="Text to display before newflashes" />
+        <param name="controls" type="radio" default="1" label="Show Controls" description="Show prev/next controls" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+        <param name="duration" type="text" default="600" label="Transition Duration" description="Duration in ms of cross-blend transition" />
+        <param name="delay" type="text" default="2500" label="Delay Length" description="Time in ms of time between newsflashes" />
+		<param name="preview_count" type="text" default="75" label="Preview Length" description="Length of characters to show in MooTools preview" />
+	</params>
+	<params group="advanced">
+		<param name="cache" type="hidden" default="0"/>
+		<param name="module_cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+</install>

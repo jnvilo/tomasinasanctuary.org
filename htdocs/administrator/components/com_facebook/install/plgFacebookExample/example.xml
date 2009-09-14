@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- $Id: example.xml 36 2008-03-12 02:21:01Z chalet16 $ -->
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD plugin 1.0//EN" "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install version="1.5" type="plugin" group="facebook">
+	<name>Facebook - Example</name>	<creationDate>$LastChangedDate: 2008-03-12 09:21:01 +0700 (Wed, 12 Mar 2008) $</creationDate>
+	<author>Witchakorn Kamolpornwijit</author>
+	<authorEmail>chalet16@gmail.com</authorEmail>
+	<authorUrl>whyworldhot.com</authorUrl>
+	<copyright>(C) 2007 Witchakorn Kamolpornwijit. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0a</version>
+	<description>Example JoomlaFacebook Plugin</description>
+	<files>
+		<filename plugin="example">example.php</filename>
+	</files>
+</install>

@@ -1,0 +1,7 @@
+# plgFacebookInvite
+# Author: Witchkorn Kamolpornwijit
+# License: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Note: All ini files need to be saved as UTF-8 - No BOM
+INVITETITLE=เชิญเพื่อนของคุณมาดูเว็บไซต์นี้
+PARAMLBLINVITE=ข้อตวามที่จะใช้เชิญ(FBML format)
+PARAMDESINVITE=ใช้ข้อความ SITENAME แทนชื่อเว็บไซต์และ FROM แทนชื่อผู้ส่ง

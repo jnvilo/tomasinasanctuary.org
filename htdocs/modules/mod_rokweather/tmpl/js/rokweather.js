@@ -1,0 +1,15 @@
+/**
+ * RokWeather - A fantastic module for showing any weather in your site
+ * 
+ * @version		0.1
+ * 
+ * @license		MIT-style license
+ * @author		Djamil Legato <djamil [at] rockettheme.com>
+ * @client		Andy Miller @ Rockettheme
+ * @copyright	Author
+ */
+
+var RokWeatherTip = "Double click to edit location and hit enter to save.";
+
+/* Do not edit below! */
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('k 1e=8 1p({1k:0.1,z:{V:0},1z:4(z){2.1A(z);2.d=$(\'G\')||1w;g(!2.d)E O;2.h=2.d.n(\'h\').5(\'a\',\'c\');2.F=2.d.n(\'F\');2.l=2.d.n(\'.G-1b\');2.9=2.d.n(\'.9\');2.f=2.d.o(\'.f 1t\');2.7=11.1v(\'14\')||2.z.V;2.7=2.7.1u();2.L=8 13.Y(2.l,\'15\',{W:O,D:Z}).B(1);2.P=8 13.Y(2.9,\'15\',{W:O,D:Z}).B(1);2.6=8 A(\'1y\',{\'6\':1r}).19(2.h.j).r(2.l.1q().5(\'U\',\'1j\'),\'1i\');2.10=8 1h([2.6]);2.X()},X:4(){k 3=2;2.6.1l({\'1o\':4(e){3.10.1m();2.5(\'H\',\'1x\');g(!3.p)3.p=3.12(2);w 3.p.5(\'a\',\'\');3.p.1F()}});3.f.M(\'q\');3.f[3.7].Q(\'q\');3.t(3.7);3.f.m(4(7,i){g(7.1C(\'q\'))3.7=i;7.T(\'1R\',4(){3.t(i);11.B(\'14\',i,{D:1T})})})},12:4(6){k 3=2;E 8 A(\'h\',{\'1Y\':\'h-p\',\'1W\':{\'U\':\'1O\',\'1N\':\'c\',\'1G\':6.R().S.x,\'1D\':6.R().S.y},\'j\':(1M.1L)?6.1K:6.1J()}).r(6,\'1Z\').T(\'1H\',4(e){e=8 1E(e);g(e.J!=\'1Q\'&&e.J!=\'16\')E;g(e.J==\'16\'||2.j==3.h.j){3.6.5(\'H\',\'18\');2.5(\'a\',\'c\')}w{3.h.1I(\'j\',2.j);3.6.19(2.j).5(\'H\',\'18\').Q(\'1f\');2.5(\'a\',\'c\');3.F.1V({1X:3.1d.1U(3)})}})},1d:4(1c){k I=8 A(\'K\').1P(1c),3=2;2.P.s(0);2.L.s(0).1n(4(){I.n(\'.9\').1g().r(3.9.1a());I.n(\'.G-1b\').r(3.l.1a());k b=3.9.o(\'K\');3.t(3.7);3.P.s(1);3.L.s(1);3.6.M(\'1f\')})},t:4(N){2.7=N;2.f.M(\'q\');2.f[2.7].Q(\'q\');k u=2.l.o(\'.17 .u\');k v=2.l.o(\'.17 .v\');g(!N){v.m(4(b){b.5(\'a\',\'c\')});u.m(4(b){b.5(\'a\',\'C\')})}w{v.m(4(b){b.5(\'a\',\'C\')});u.m(4(b){b.5(\'a\',\'c\')})}2.9.o(\'K\').m(4(9,i){g(i==2.7)9.5(\'a\',\'C\');w 9.5(\'a\',\'c\')},2)}});1e.1B(8 1s,8 1S);',62,124,'||this|self|function|setStyle|title|degree|new|icon|display|deg|none|container||degrees|if|input||value|var|output|each|getElement|getElements|board|active|inject|start|degEvent|degf|degc|else|||options|Element|set|block|duration|return|form|rokweather|visibility|trash|key|div|fx|removeClass|index|false|fxicon|addClass|getSize|size|addEvent|position|defaultDegree|wait|attachEvent|Style|300|tooltip|Cookie|createBoard|Fx|rokweather_degree|opacity|esc|forecast|visible|setText|empty|wrapper|response|complete|RokWeather|loading|getChildren|Tips|top|relative|version|addEvents|hide|chain|dblclick|Class|getParent|RokWeatherTip|Options|span|toInt|get|null|hidden|h5|initialize|setOptions|implement|hasClass|height|Event|select|width|keyup|setProperty|getText|innerHTML|webkit|window|outline|absolute|setHTML|enter|click|Events|365|bind|send|styles|onComplete|class|before'.split('|'),0,{}))

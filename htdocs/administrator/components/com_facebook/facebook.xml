@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: facebook.xml 36 2008-03-12 02:21:01Z chalet16 $ -->
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+	<name>Facebook</name>
+	<creationDate>$LastChangedDate: 2008-03-12 09:21:01 +0700 (Wed, 12 Mar 2008) $</creationDate>
+	<author>Witchakorn Kamolpornwijit</author>
+	<authorEmail>chalet16@gmail.com</authorEmail>
+	<authorUrl>http://www.whyworldhot.com</authorUrl>
+	<copyright>(C) 2007 Witchakorn Kamolpornwijit. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0a</version>
+	<description>FACEBOOKDESCRIPTION</description>
+	<installfile></installfile>
+	<uninstallfile></uninstallfile>
+	<install><sql></sql></install>
+	<uninstall><sql></sql></uninstall>
+	<files folder="site">
+		<folder>facebook-platform</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>api.php</filename>
+		<filename>controller.php</filename>
+		<filename>facebook.php</filename>
+	</files>
+	<languages folder="admin">
+		<language tag="en-GB">en-GB.com_facebook.ini</language>
+		<language tag="th-TH">th-TH.com_facebook.ini</language>
+	</languages>	
+	<administration>
+		<menu>Joomla-Facebook</menu>
+		<files folder="admin">
+			<folder>install</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<filename>admin.facebook.php</filename>
+			<filename>controller.php</filename>
+			<filename>config.xml</filename>
+		</files>   	
+		<languages folder="admin">
+			<language tag="en-GB">en-GB.com_facebook.ini</language>
+			<language tag="th-TH">th-TH.com_facebook.ini</language>
+		</languages>	
+	</administration>
+</install>

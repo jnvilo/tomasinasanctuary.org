@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+ <name>joomla_flash_uploader</name>
+ <creationDate>Jun 2009</creationDate>
+ <author>Michael Dempfle</author>
+ <copyright>Freeeware</copyright>
+ <authorEmail>jfu@mdempfle.de</authorEmail>
+ <authorUrl>jfu.tinywebgallery.com</authorUrl>
+ <version>2.9.1</version>
+ <files folder="site">
+  <filename>joomla_flash_uploader.php</filename>
+  <filename>joomla_flash_uploader.html.php</filename>
+  <filename>jfu.css</filename>
+ </files>
+  <languages folder="site/language">
+      <language tag="en-GB">en-GB.com_joomla_flash_uploader.ini</language>
+      <language tag="de-DE">de-DE.com_joomla_flash_uploader.ini</language>
+      <language tag="ja-JP">ja-JP.com_joomla_flash_uploader.ini</language>
+    </languages>
+ <params>
+        <param name="tfu_sel_id" type="radio" default="0" label="JFU_PARAM_MODE" description="JFU_PARAM_MODE.TOOLTIP">
+			<option value="0">E_S_ID</option>
+			<option value="1">E_S_GID</option>
+		</param>
+ 		<param name="tfu_id"  type="text" size="5" default="" label="JFU_PARAM_ID" description="JFU_PARAM_ID.TOOLTIP" />
+ </params>	
+ <installfile>install.joomla_flash_uploader.php</installfile>
+ <uninstallfile>uninstall.joomla_flash_uploader.php</uninstallfile>
+ 
+   <administration>
+    <menu>Joomla Flash Uploader</menu>
+    <submenu>
+     <menu act="upload">Upload</menu>
+     <menu act="config">Config</menu>
+     <menu act="user">Users</menu>
+     <menu act="help">Info / Limits / Register</menu>
+    </submenu>
+    <languages folder="admin/language">
+      <language tag="en-GB">en-GB.com_joomla_flash_uploader.ini</language>
+      <language tag="en-GB">en-GB.com_joomla_flash_uploader.menu.ini</language>
+      <language tag="de-DE">de-DE.com_joomla_flash_uploader.ini</language>
+      <language tag="de-DE">de-DE.com_joomla_flash_uploader.menu.ini</language>
+      <language tag="ja-JP">ja-JP.com_joomla_flash_uploader.ini</language>
+      <language tag="ja-JP">ja-JP.com_joomla_flash_uploader.menu.ini</language>
+    </languages>
+    <files folder="admin">
+		<filename>tfu/swfobject.js</filename>
+		<filename>tfu/my_tfu_config.php</filename>
+		<filename>tfu/tfu_config.php</filename>
+		<filename>tfu/tfu_exifReader.php</filename>
+		<filename>tfu/tfu_file.php</filename>
+		<filename>tfu/tfu_helper.php</filename>
+		<filename>tfu/tfu_login.php</filename>
+		<filename>tfu/tfu_upload.php</filename>
+		<filename>tfu/lang/br.xml</filename>
+		<filename>tfu/lang/cn.xml</filename>
+		<filename>tfu/lang/ct.xml</filename>
+		<filename>tfu/lang/da.xml</filename>
+		<filename>tfu/lang/de.xml</filename>
+		<filename>tfu/lang/default.xml</filename>
+		<filename>tfu/lang/en.xml</filename>
+		<filename>tfu/lang/es.xml</filename>
+		<filename>tfu/lang/fr.xml</filename>
+		<filename>tfu/lang/it.xml</filename>
+		<filename>tfu/lang/jp.xml</filename>
+		<filename>tfu/lang/nl.xml</filename>
+		<filename>tfu/lang/no.xml</filename>
+		<filename>tfu/lang/pl.xml</filename>
+		<filename>tfu/lang/pt.xml</filename>
+		<filename>tfu/lang/ru.xml</filename>
+		<filename>tfu/lang/se.xml</filename>
+		<filename>tfu/lang/sk.xml</filename>
+		<filename>tfu/lang/tw.xml</filename>
+		<filename>tfu/lang/br.gif</filename>
+		<filename>tfu/lang/cn.gif</filename>
+		<filename>tfu/lang/ct.gif</filename>
+		<filename>tfu/lang/da.gif</filename>
+		<filename>tfu/lang/de.gif</filename>
+		<filename>tfu/lang/en.gif</filename>
+		<filename>tfu/lang/es.gif</filename>
+		<filename>tfu/lang/fr.gif</filename>
+		<filename>tfu/lang/it.gif</filename>
+		<filename>tfu/lang/jp.gif</filename>
+		<filename>tfu/lang/nl.gif</filename>
+		<filename>tfu/lang/no.gif</filename>
+		<filename>tfu/lang/pl.gif</filename>
+		<filename>tfu/lang/pt.gif</filename>
+		<filename>tfu/lang/ru.gif</filename>
+		<filename>tfu/lang/se.gif</filename>
+		<filename>tfu/lang/sk.gif</filename>
+		<filename>tfu/lang/tw.gif</filename>	
+		<filename>tfu/lang/us.gif</filename>	
+		<filename>tfu/lang/readme.txt</filename>
+		<filename>images/user_f2.png</filename>
+        <filename>help/en-GB/tfu.html</filename>
+		<filename>help/de-DE/tfu.html</filename>
+		<filename>help/ja-JP/tfu.html</filename>
+		<filename>tfu/tfu_291.swf</filename>
+		<filename>admin.joomla_flash_uploader.php</filename>
+		<filename>admin.joomla_flash_uploader.html.php</filename>
+		<filename>joomla_flash_uploader.class.php</filename>
+		<filename>toolbar.joomla_flash_uploader.php</filename>
+		<filename>toolbar.joomla_flash_uploader.html.php</filename>
+		<filename>jfu.js</filename>
+		<filename>jfu.css</filename>
+		<filename>images/index.htm</filename>
+        <filename>index.htm</filename>
+		<filename>tfu/index.htm</filename>
+		<filename>tfu/lang/index.htm</filename>
+		<filename>help/index.html</filename>
+	    <filename>help/en-GB/index.html</filename>
+	 	<filename>help/de-DE/index.html</filename>
+	    <filename>help/ja-JP/index.html</filename>
+    </files>
+   </administration>
+</install>

@@ -1,0 +1,175 @@
+/* @group Reset */
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Accordion */
+
+dl.artcats
+{
+    width: 170px;
+}
+
+/* @group Ebene 1 */
+
+dl.artcats dd h1 {
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+dl.artcats dd ul {
+    margin: 0;
+    font-size: 1em;
+    padding-left: 40px;
+}
+
+dl.artcats dd dd h1 {
+    margin-left: 20px;
+}
+
+dl.artcats dd dd ul {
+    padding-left: 50px;
+}
+
+dl.artcats dd dd dd h1 {
+    margin-left: 30px;
+}
+
+dl.artcats dd dd dd ul {
+    /* padding-left: 60px; */
+}
+
+dl.artcats dd dd dd dd h1 {
+    margin-left: 0;
+}
+
+dl.artcats dd dd dd dd ul {
+    padding-left: 20px;
+}
+
+dl.artcats dt
+{
+    position: relative;
+    padding: 0 0 0 5px;
+    font-weight: bold;
+}
+
+dl.artcats dt span {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    padding: 5px 0 2px 25px;
+    background: transparent url(../../icons/icon_artcats_closed.png) no-repeat;
+}
+
+dl.artcats dt a
+{
+    
+}
+
+* html dl.artcats dt
+{
+    cursor: hand;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../icons/icon_artcats_closed.png', sizingMethod='crop');
+    background-image: none;
+}
+
+dl.artcats span.open
+{
+    background-image: url(../../icons/icon_artcats_open.png);
+}
+
+* html dl.artcats span.open
+{
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../icons/icon_artcats_open.png', sizingMethod='crop');
+    background-image: none;
+}
+
+dl.artcats dd
+{
+    position: relative;
+    overflow: hidden;
+}
+
+dl.artcats dt.artcats_content
+{
+    position: relative;
+    height: 100%;
+    color: #000;
+}
+
+/* @group Inhalt */
+
+dl.artcats dd.sub_artcats
+{
+    
+}
+
+dl.artcats dd.artcats_content
+{
+    padding: 0 10px 0 25px;
+}
+
+dl.artcats dd.artcats_content p
+{
+    padding: 5px 0 7px 0;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Ebene 2 */
+
+dl.artcats dd dl dt
+{
+    padding-left: 15px;
+    background-position: 20px 0;
+}
+
+dl.artcats dd dl dd.artcats_content
+{
+    padding-left: 25px;
+}
+
+/* @end */
+
+/* @group Ebene 3 */
+
+dl.artcats dd dl dd dl dt
+{
+    padding-left: 25px;
+    background-position: 40px 0;
+}
+
+dl.artcats dd dl dd dl dd.artcats_content
+{
+    padding-left: 35px;
+}
+
+/* @end */
+
+/* @group Ebene 4 */
+
+dl.artcats dd dl dd dl dd dl dt
+{
+    padding-left: 35px;
+    background-position: 60px 0;
+}
+
+dl.artcats dd dl dd dl dd dl dd.artcats_content
+{
+    padding-left: 45px;
+}
+
+/* @end */
+
+/* @end */

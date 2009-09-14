@@ -1,0 +1,38 @@
+/*
+// JoomlaWorks "Simple Image Gallery PRO" Plugin for Joomla! 1.5.x - Version 2.0.4
+// Copyright (c) 2006 - 2009 JoomlaWorks Ltd.
+// This code cannot be redistributed without permission from JoomlaWorks
+// More info at http://www.joomlaworks.gr
+// Designed and developed by JoomlaWorks
+// ***Last update: May 4th, 2009***
+*/
+
+/* --- Generic Styling --- */
+a:active,a:focus { outline:0; }
+table.contentpaneopen { width:100%; }
+ul.sig-container { margin:8px auto !important; padding:8px 0 !important; list-style:none; clear:both; overflow:hidden; }
+
+/* --- Single Thumbnail Mode Styling --- */
+ul.sig-container-single { margin:0 !important; padding:8px 0 !important; list-style:none; float:left; }
+
+/* Thumbnail */
+li.sig-block { float:left; background:none!important; margin:2px; padding:0; }
+li.sig-block span.sig-link-wrapper { }
+li.sig-block span.sig-link-innerwrapper { }
+li.sig-block a.sig-link,
+li.sig-block a.sig-link:hover { position:relative; display:block;  background:#000; padding:0; margin:0 auto; }
+li.sig-block a.sig-link { color:#fff; border:6px solid #222;}
+li.sig-block a.sig-link:hover { color:#f60; text-decoration:none; border:6px solid #444; }
+li.sig-block a.sig-link img.sig-image { display:block; background-repeat:no-repeat; background-position:50% 50%; border:none; }
+li.sig-clr { clear:both; float:none !important; height:0 !important; line-height:0 !important; border:none !important; background:none !important; width:auto; margin:0 !important; padding:0 !important; }
+
+/* Caption */
+span.sig-pseudo-caption,span.sig-caption { display:block; position:absolute; bottom:10%; left:10%; right:0; text-align:right; padding:2px 4px; font-family:"Trebuchet MS", Trebuchet, Arial, Verdana, sans-serif; font-size:11px; }
+span.sig-pseudo-caption { background:#000; opacity:0.7; -moz-opacity:0.7; }
+span.sig-pseudo-caption b { visibility:hidden; }
+
+/* Popup */
+span.sig-popup-caption { font-weight:bold; color:#C63C13; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; }
+a.sig-download-link,
+a.sig-download-link:hover { background:url(disk.png) no-repeat left center; padding:4px 0 4px 20px; }
+div.sig-mod-position { text-align:center; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:4px; margin:8px 0; background:#ffffdd; }

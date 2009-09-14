@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+  <name>fpss</name>
+  <creationDate>01/09/2008</creationDate>
+  <author>JoomlaWorks</author>
+  <authorEmail>info@joomlaworks.gr</authorEmail>
+  <authorUrl>http://www.joomlaworks.gr</authorUrl>
+  <copyright>Copyright (c) 2006 - 2008 JoomlaWorks - This code cannot be redistributed without permission from www.joomlaworks.gr</copyright>
+  <version>2.0.0</version>
+  <description>Frontpage SlideShow</description>
+  <installfile>install.fpss.php</installfile>
+  <uninstallfile>uninstall.fpss.php</uninstallfile>
+  <files>
+    <filename>fpss.class.php</filename>
+    <filename>fpss.html.php</filename>
+    <filename>fpss.php</filename>
+    <filename>images/index.html</filename>
+    <filename>images/2007_transformers_014_1.jpg</filename>
+    <filename>images/ao4.jpg</filename>
+    <filename>images/the_kingdom_20070820114258369.jpg</filename>
+    <filename>images/TVD_TR_02183_2.jpg</filename>
+    <filename>images/thumbs/index.html</filename>
+  </files>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">fpss.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <queries>
+      <query>DROP TABLE IF EXISTS `#__fpss_categories`</query>
+      <query>DROP TABLE IF EXISTS `#__fpss_slides`</query>
+    </queries>
+  </uninstall>
+  <!-- Administration START -->
+  <administration>
+    <menu>Frontpage SlideShow</menu>
+    <files folder="admin">
+      <filename>admin.fpss.php</filename>
+      <filename>admin.fpss.html.php</filename>
+      <filename>configuration.php</filename>
+      <filename>class.upload.php</filename>
+      <filename>fpss.sql</filename>
+      <filename>tables/slide.php</filename>
+      <filename>tables/category.php</filename>
+      <filename>style/ajax.js</filename>
+      <filename>style/fpss.css</filename>
+      <filename>style/mootools.js</filename>
+      <filename>style/slimbox.js</filename>
+      <filename>style/smoothbox.js</filename>
+      <filename>images/bullet_go.png</filename>
+      <filename>images/closelabel.gif</filename>
+      <filename>images/disk.png</filename>
+      <filename>images/index.html</filename>
+      <filename>images/loading.gif</filename>
+      <filename>images/logo.png</filename>
+      <filename>images/nav-active.png</filename>
+      <filename>images/nav.png</filename>
+      <filename>images/nextlabel.gif</filename>
+      <filename>images/picture.png</filename>
+      <filename>images/prevlabel.gif</filename>
+      <filename>images/publish_g.png</filename>
+      <filename>images/publish_r.png</filename>
+      <filename>images/publish_x.png</filename>
+      <filename>images/publish_y.png</filename>
+      <filename>images/tab_bg.png</filename>
+      <filename>language/en-GB.php</filename>
+    </files>
+  </administration>
+  <!-- Administration END -->
+</install>

@@ -1,0 +1,17 @@
+/*
+// JoomlaWorks "Simple Image Gallery PRO" Plugin for Joomla! 1.5.x - Version 2.0.4
+// Copyright (c) 2006 - 2009 JoomlaWorks Ltd.
+// This code cannot be redistributed without permission from JoomlaWorks
+// More info at http://www.joomlaworks.gr
+// Designed and developed by JoomlaWorks
+// ***Last update: May 4th, 2009***
+*/
+
+/* --- IE styling only --- */
+li.sig-block span.sig-link-wrapper { background:url(shadow.gif) no-repeat right bottom;padding:0 5px 5px 0; }
+li.sig-block span.sig-link-innerwrapper { margin:0; }
+
+/* Caption */
+span.sig-pseudo-caption,
+span.sig-caption {width:100%; padding:2px 0; cursor:pointer; }
+span.sig-pseudo-caption { filter:alpha(opacity=70); }

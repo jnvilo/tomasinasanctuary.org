@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- $Id: profile.xml 36 2008-03-12 02:21:01Z chalet16 $ -->
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD plugin 1.0//EN" "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install version="1.5" type="plugin" group="facebook">
+	<name>Facebook - Profile</name>	<creationDate>$LastChangedDate: 2008-03-12 09:21:01 +0700 (Wed, 12 Mar 2008) $</creationDate>
+	<author>Witchakorn Kamolpornwijit</author>
+	<authorEmail>chalet16@gmail.com</authorEmail>
+	<authorUrl>whyworldhot.com</authorUrl>
+	<copyright>(C) 2007 Witchakorn Kamolpornwijit. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0a</version>
+	<description>Display Profile settings in Facebook application.</description>
+	<files>
+		<filename plugin="profile">profile.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_facebook_profile.ini</language>
+		<language tag="th-TH">th-TH.plg_facebook_profile.ini</language>
+	</languages> 
+	<params>
+		<param name="header" type="textarea" default="" label="PARAMLBLHEADER" rows="5" cols="30" description="PARAMDESHEADER" />	
+		<param name="footer" type="textarea" default="&lt;hr/&gt;Powered By JoomlaFacebook" label="PARAMLBLFOOTER" rows="5" cols="30" description="PARAMDESFOOTER" />	
+	</params>
+</install>

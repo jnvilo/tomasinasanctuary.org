@@ -1,0 +1,14 @@
+<modify-entry
+   name="PEAR5"
+   present-props="svn:special"
+   cachable-props="svn:special svn:externals svn:needs-lock"
+   has-prop-mods="false"
+   has-props="true"/>
+<rm
+   name=".svn/props/PEAR5.svn-work"/>
+<cp-and-translate
+   dest="PEAR5"
+   name=".svn/text-base/PEAR5.svn-base"/>
+<modify-entry
+   name="PEAR5"
+   text-time="working"/>

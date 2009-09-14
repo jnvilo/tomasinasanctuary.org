@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+	<name>RokModule</name>
+	<author>RocketTheme</author>
+	<creationDate>June 2008</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>www.rockettheme.com</authorUrl>
+	<version>1.5.0</version>
+	<description>Displays a module as a component - useful for ajax</description>
+	
+	<install>
+	</install>
+	
+	<uninstall>
+	</uninstall>
+	
+	<files>
+		<filename>rokmodule.php</filename>
+	</files>
+	
+	<params>
+	</params>
+	
+	<administration>
+	
+		<files folder="admin">
+			<filename>admin.rokmodule.php</filename>
+			<filename>admin.rokmodule.html.php</filename>
+			<filename>controller.php</filename>
+		</files>
+		
+	</administration>
+	
+</install>

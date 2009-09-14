@@ -1,0 +1,42 @@
+.artcats, .artcats ul{
+	list-style:none;
+	margin-left:20px;
+}
+.artcats .contract{
+	display: block;
+}
+.artcats .expand{
+	display: none;
+}
+.artcats ul{
+	padding-top:.5em;
+}
+
+.artcats li{
+	padding-bottom:.1em !important;
+}
+
+.artcats a{
+}
+
+.artcats a:hover{
+}
+
+.artcats .expandable{
+	background-image:none !important;
+}
+
+.artcats .expandable img{
+	cursor: pointer;
+	margin-right:5px;
+}
+
+.artcats a.active {
+	font-weight: bold;
+}
+
+.artcats .expandAll, 
+.artcats .collapseAll {
+	font-weight:bold;
+	background-image:none;
+}

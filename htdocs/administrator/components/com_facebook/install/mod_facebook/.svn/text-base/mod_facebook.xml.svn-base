@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD module 1.0//EN" "http://dev.joomla.org/xml/1.5/module-install.dtd">
+<install type="module" version="1.5.0">
+	<name>Facebook Login</name>	<creationDate>$LastChangedDate$</creationDate>
+	<author>Witchakorn Kamolpornwijit</author>
+	<authorEmail>chalet16@gmail.com</authorEmail>
+	<authorUrl>whyworldhot.com</authorUrl>
+	<copyright>(C) 2007 Witchakorn Kamolpornwijit. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>0.1</version>
+	<description>Facebook login button module</description>
+	<files>
+		<filename module="mod_facebook">mod_facebook.php</filename>
+		<folder>tmpl</folder>		
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_facebook.ini</language>
+		<language tag="th-TH">th-TH.mod_facebook.ini</language>
+	</languages> 
+	<params>
+		<param name="showimg" type="list" default="1" label="PARAMLBLSHOWIMG" description="PARAMDESSHOWIMG">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="showadmin" type="list" default="1" label="PARAMLBLSHOWADMIN" description="PARAMDESSHOWADMIN">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>

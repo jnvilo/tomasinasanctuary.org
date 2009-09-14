@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+  <name>Frontpage SlideShow</name>
+  <author>JoomlaWorks</author>
+  <creationDate>01/09/2008</creationDate>
+  <copyright>Copyright (c) 2006 - 2008 JoomlaWorks. All rights reserved. This code cannot be redistributed without permission from JoomlaWorks.</copyright>
+  <authorEmail>contact@joomlaworks.gr</authorEmail>
+  <authorUrl>http://www.joomlaworks.gr</authorUrl>
+  <version>2.0.0</version>
+  <description>FPSS_DESCRIPTION</description>
+  <params>
+    <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+    <param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+      <option value="1">Use global</option>
+      <option value="0">No caching</option>
+    </param>
+    <param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="@spacer" type="spacer" default="======== Slideshow Category &amp; Engine ========" label="" description="" />
+    <param name="catid" type="text" default="1" label="Enter the ID of the slideshow category" description="Enter the ID of the slideshow category" />
+    <param name="engine" type="radio" default="jquery" label="Choose Slideshow Engine?" description="Choose appropriately to avoid any javascript issues with other extensions or even your template!">
+      <option value="jquery">jQuery based</option>
+      <option value="mootools">Mootools based</option>
+    </param>
+    <param name="disablelib" type="radio" default="0" label="Disable core library?" description="If you are using other scripts on your site which already include either Mootools or jQuery, you might consider setting this option to 'yes', in case you are faced with javascript conflicts. This option will not work if you choose the 'Compress JS code using PHP' option below.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="optimizejs" type="radio" default="0" label="Compress JS code using PHP?" description="Improve your site's performance by enabling this feature. PHP compresses JS code and minimizes page load times. This includes both the core JS library and the slideshow engine. Please note that some servers may not support this feature.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="@spacer" type="spacer" default="========== Slideshow Parameters ==========" label="" description="" />
+    <param name="fpss_template" type="folderlist" directory="/modules/mod_fpss/mod_fpss/templates" filter="." default="Movies" hide_default="1" hide_none="1" label="Template" description="Choose the output template of the module. Frontpage Slideshow comes prepacked with 8 available templates to choose from." />
+    <param name="width" type="text" default="500" label="Slideshow Width" description="The width of the slideshow displaying on your site." />
+    <param name="height" type="text" default="308" label="Slideshow Height" description="The height of the slideshow displaying on your site." />
+    <param name="sidebar_width" type="text" default="200" label="Sidebar Width (applies to certain FPSS templates only)" description="Width of the sidebar in pixels. Concerns the 'Uncut', 'FSD', 'Movies' and 'Sleek' templates by default. This width will be added to the overall width of the slideshow or otherwise." />
+    <param name="hide_nav" type="radio" default="0" label="Hide navigation bar?" description="Choose if you want to show or hide the navigation bar at the bottom of the slideshow.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="delay" type="text" default="6000" label="Slide Delay" description="Pause between slides in ms." />
+    <param name="speed" type="text" default="1000" label="Slideshow Speed" description="Slide transition time in ms." />
+    <param name="loadingTime" type="text" default="800" label="Preloader image delay time" description="Time in milliseconds. 1000 is 1 second." />
+    <param name="autoSlide" type="radio" default="1" label="Autostart slideshow" description="Choose whether the slideshow will start or hold on page load.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="random" type="radio" default="0" label="Display slides randomly?" description="Random display of the slides.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="limitslides" type="text" default="" label="Limit slides being displayed to..." description="This option can be very useful if you have for example 30 slides on your slideshow but only want to show 10 at a time. You input '10' in this case and only 10 slides will appear. If you combine this option with the 'random' feature right above, you'll get a smart display feature for your slideshow. By default this option is empty to enable display of all slides." />
+    <param name="rotateAction" type="radio" default="click" label="Slides should switch on..." description="Choose how slides switch when using the navigation.">
+      <option value="click">mouse click</option>
+      <option value="mouseover">mouse over</option>
+    </param>
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="@spacer" type="spacer" default="========== Mootools Slideshow Engine Parameters ==========" label="" description="" />
+    <param name="mtCTRtext_effect" type="radio" default="0" label="Use text transition effect?" description="Adds a nice transition for text when switching between slides.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="mtCTRtransitionText" type="text" default="1000" label="Text transition effect time" description="Applies only if you've selected 'Yes' to the above option. Time in milliseconds. 1000 is 1 second." />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="@spacer" type="spacer" default="========== Content Parameters ==========" label="" description="" />
+    <param name="seperator" type="text" default=">>" label="Section/Category Separator" description="seperator" />
+    <param name="words" type="text" default="20" label="Word limit" description="Word limit. Enter 0 to disable it." />
+    <param name="chars" type="text" default="" label="Character limit" description="Character limit" />
+    <param name="striptags" type="radio" default="1" label="Cleanup HTML tags from text?" description="If you choose 'Yes' then all HTML tags will be stripped from the main text of your slide, except the tags specified in the mod_fpss.php file.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="@spacer" type="spacer" default="========== Global Display Parameters ==========" label="" description="" />
+    <param name="showtitle" type="radio" default="2" label="Show title" description="Show title">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+      <option value="2">Inherit from slide's settings</option>
+    </param>
+    <param name="showseccat" type="radio" default="2" label="Show section/category (if applicable)" description="Show section/category (if applicable)">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+      <option value="2">Inherit from slide's settings</option>
+    </param>
+    <param name="showcustomtext" type="radio" default="2" label="Show custom text/introtext" description="Show custom text/introtext">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+      <option value="2">Inherit from slide's settings</option>
+    </param>
+    <param name="showplaintext" type="radio" default="2" label="Show tagline text" description="Show tagline text">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+      <option value="2">Inherit from slide's settings</option>
+    </param>
+    <param name="showreadmore" type="radio" default="2" label="Show 'read more...' link" description="Show 'read more...' link">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+      <option value="2">Inherit from slide's settings</option>
+    </param>
+    <param name="nolink" type="radio" default="2" label="Disable all slide links" description="Disable all slide links">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+      <option value="2">Inherit from slide's settings</option>
+    </param>
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+  </params>
+  <files>
+    <filename module="mod_fpss">mod_fpss.php</filename>
+    <filename module="mod_fpss">mod_fpss/fpss.net.png</filename>
+    <filename module="mod_fpss">mod_fpss/engines/jquery-comp.js</filename>
+    <filename module="mod_fpss">mod_fpss/engines/jquery-fpss-comp.js</filename>
+    <filename module="mod_fpss">mod_fpss/engines/jquery-fpss.php</filename>
+    <filename module="mod_fpss">mod_fpss/engines/mootools-comp.js</filename>
+    <filename module="mod_fpss">mod_fpss/engines/mootools-fpss-comp.js</filename>
+    <filename module="mod_fpss">mod_fpss/engines/mootools-fpss.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/corner.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/corner.psd</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/loading.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/nav-bg.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/readmore-hover.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/readmore.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/template_css.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/template_css_ie.css</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Default/transparent_bg.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/FSD/loading.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/FSD/readmore.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/FSD/readmore_ie.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/FSD/template_css.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/FSD/template_css_ie.css</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Obs/loading.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Obs/navbar.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Obs/next.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Obs/prev.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Obs/template_css.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Obs/template_css_ie.css</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Obs/transparent_bg.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Rasper/loading_black.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Rasper/nav-left-ie.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Rasper/nav-left.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Rasper/nav-right-ie.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Rasper/nav-right.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Rasper/template_css.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Rasper/template_css_ie.css</filename>
+    <filename module="mod_fpss">mod_fpss/templates/JJ-Rasper/transparent_bg.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/dotted.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/loading_black.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/nav-active.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/nav.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/readmore-hover.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/readmore.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/template_css.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/template_css_ie.css</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Movies/transparent_bg.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Sleek/loading_black.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Sleek/nav-current.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Sleek/nav-next.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Sleek/nav-prev.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Sleek/nav.psd</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Sleek/template_css.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Sleek/template_css_ie.css</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Sleek/transparent_bg.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/TT/black_stripes.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/TT/loading.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/TT/template_css.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/TT/template_css_ie.css</filename>
+    <filename module="mod_fpss">mod_fpss/templates/TT/transparent_bg.png</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Uncut/loading_black.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Uncut/nav-over.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Uncut/nav.gif</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Uncut/template_css.php</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Uncut/template_css_ie.css</filename>
+    <filename module="mod_fpss">mod_fpss/templates/Uncut/transparent_bg.png</filename>
+  </files>
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.mod_fpss.ini</language>
+  </languages>
+</install>

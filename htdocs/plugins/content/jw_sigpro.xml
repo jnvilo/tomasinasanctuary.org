@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+  <name>Simple Image Gallery PRO (by JoomlaWorks)</name>
+  <author>JoomlaWorks</author>
+  <authorEmail>contact@joomlaworks.gr</authorEmail>
+  <authorUrl>www.joomlaworks.gr</authorUrl>
+  <creationDate>04/05/2009</creationDate>
+  <copyright>Copyright (c) 2006 - 2009 JoomlaWorks Ltd. This code cannot be redistributed without permission from JoomlaWorks Ltd.</copyright>
+  <license>Commercial</license>
+  <version>2.0.4</version>
+  <description>JoomlaWorks Simple Image Gallery PRO Plugin v2</description>
+  <params>
+    <param name="galleries_rootfolder" type="text" default="images/stories" label="Root folder for image galleries" description="Select the starting folder for all your image galleries. This is generally preferred to be 'images/stories' so you can easily use the Joomla! media manager to upload your images into subfolders within this folder (e.g. inside: images/stories/galleries/someimagegallery)." />
+    <param name="popup_engine" type="list" default="jquery_slimbox" label="Popup engine for image galleries" description="Depending on what javascript library/framework you use in your site, choose an appropriate popup engine to achieve maximum compatibility and avoid any javascript conflicts. Popup engines not based on jQuery or Mootools will generally be neutral on all Joomla! websites.">
+      <option value="jquery_slimbox">Slimbox2 (powered by jQuery)</option>
+      <option value="jquery_prettyphoto">PrettyPhoto (powered by jQuery)</option>
+      <option value="jquery_colorbox">ColorBox (powered by jQuery)</option>
+      <option value="jquery_fancybox">FancyBox (powered by jQuery)</option>
+      <option value="mootools_multibox">MultiBox (powered by MooTools)</option>
+      <option value="mootools_slimbox">SlimBox (powered by MooTools)</option>
+      <option value="lytebox">LyteBox (with slideshow)</option>
+      <option value="highslide">HighSlide (with slideshow)</option>
+      <option value="greybox">GreyBox</option>
+      <option value="simplebox">SimpleBox (by JoomlaWorks)</option>
+    </param>
+    <param name="thb_template" type="folderlist" directory="/plugins/content/jw_sigpro/templates" default="Default" hide_default="1" hide_none="1" label="Layout template for image galleries" description="Choose a template to display your image galleries." />
+    <param name="thb_width" type="text" default="200" size="3" label="Thumbnail viewport width" description="Adjust the maximum image thumbnail width in pixels." />
+    <param name="thb_height" type="text" default="160" size="3" label="Thumbnail viewport height" description="Adjust the maximum image thumbnail height in pixels." />
+    <param name="keepratio" type="radio" default="0" label="Fit thumbnails to available viewport?" description="If set to 'yes', image thumbnails are displayed based on the aspect ratio of the original image. If set to 'no', images are zoomed to the thumbnail viewport. The last option is ideal when you want to display images of different aspect ratio in thumbnails of the same dimensions.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="jpg_quality" type="text" default="75" size="3" label="Thumbnail image quality" description="Adjust the quality of the generated image thumbnail. Values range from 0 to 100, with 100 giving the best possible result. Values between 70 to 80 should generally be preferred. Remember that the lower this value is, the smaller the size of the generated thumbnail will be." />
+    <param name="singlethumbmode" type="radio" default="0" label="Display Mode" description="Choose 'Single Thumbnail' mode to launch popup slideshows from the first thumbnail of your gallery. Use this option when you want to save some space in your document. If you select 'Normal', all corresponding thumbnails will display.">
+      <option value="0">Normal</option>
+      <option value="1">Single Thumbnail</option>
+    </param>
+    <param name="sortorder" type="list" default="0" label="Ordering" description="Order of appearance for the images. Prefer the 'Default' option if others don't work as expected.">
+      <option value="0">Default</option>
+      <option value="1">Alphabetical order</option>
+      <option value="2">Alphabetical order (case insensitive)</option>
+      <option value="3">Reverse default order</option>
+      <option value="4">Random order</option>
+    </param>
+    <param name="showcaptions" type="list" default="1" label="Default caption (label) handling" description="Please note that when you select 'Read contents of caption files' the related label files will be automatically created for you.">
+    	<option value="0">No captions</option>
+      <option value="1">Show generic messages</option>
+      <option value="2">Read contents of caption files</option>
+    </param>
+    <param name="wordlimit" type="text" default="" size="3" label="Caption word limit" description="Set caption word limit to avoid huge captions potentially hiding thumbnail images." />
+    <param name="enabledownload" type="radio" default="1" label="Enable original image download link in the popup" description="">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="loadmoduleposition" type="text" default="" label="Load a module position in the popup" description="Load module position in the popup window. E.g. add 'banner' (without the quotes) to load the related module position." />
+    <param name="cache_expire_time" type="text" default="120" size="3" label="Thumbnail cache expiration time" description="Thumbnail cache expiration time in minutes. To instantly refresh the thumbnail cache for a particular gallery, simply set this value to 0, reload the gallery page in Joomla! and reset it to 120. Never forget this value to 0 or else thumbnails will be created every time a gallery is loaded, thus overloading the server's resources." />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="debugMode" type="radio" default="0" label="Debug mode" description="Enable to display possible errors or other warnings. Useful for debugging. Use this option when asked by the support team.">
+      <option value="0">Disabled</option>
+      <option value="1">Enabled</option>
+    </param>
+  </params>
+  <files>
+    <filename plugin="jw_sigpro">jw_sigpro.php</filename>
+    <folder>jw_sigpro</folder>
+  </files>
+  <languages>
+    <language tag="en-GB">en-GB.plg_content_jw_sigpro.ini</language>
+  </languages>
+</install>

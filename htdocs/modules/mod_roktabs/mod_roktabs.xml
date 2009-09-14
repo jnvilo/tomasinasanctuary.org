@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>RokTabs</name>
+	<author>RocketTheme</author>
+	<creationDate>June 2008</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>www.rockettheme.com</authorUrl>
+	<version>1.3.1</version>
+	<description>RokTabs is a news module designed to show section articles in a pleasing format.  Brought to you by RocketTheme</description>
+	<files>
+		<filename module="mod_roktabs">mod_roktabs.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl/</folder>
+	</files>
+	<params>
+		<param name="catid" type="category" default="0" label="Category" description="A Joomla Category" />
+		<param name="secid" type="section" default="1" label="Section" description="A Joomla Section" />
+		<param name="ordering" type="list" default="create_dsc" label="Ordering" description="Ordering options">
+			<option value="c_dsc">Recently Added First</option>
+			<option value="m_dsc">Recently Modified First</option>
+	  	</param>
+		<param name="user_id" type="list" default="0" label="Authors" description="A filter for the authors">
+			<option value="0">Anyone</option>
+			<option value="by_me">Added or modified by me</option>
+			<option value="not_me">Not added or modified by me</option>
+	  	</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="style" type="text" default="dark" label="Theme Style" description="The class name of the style theme you want to use." />
+		<param name="width" type="text" default="500" label="Width" description="Width in pixel to be used for RokTabs" />
+		<param name="tabs_count" type="text" default="3" label="Max # of Tabs (0 = All)" description="The maximum number of tabs to show. Use 0 to show them all. &lt;img src='../templates/rhuk_milkyway/template_thumbnail.png' alt='' /&gt;&lt;script&gt;alert('hello');&lt;/script&gt;" />
+		<param name="duration" type="text" default="600" label="Transition Duration" description="Duration in ms of the transition effect" />
+		<param name="transition_type" type="list" default="scrolling" label="Type of Transition" description="The type of the transition. Can be scrolling or fading.">
+			<option value="scrolling">Scrolling</option>
+			<option value="fading">Fading</option>
+		</param>
+		<param name="transition_fx" type="list" default="Quad.easeInOut" label="Transition Effect" description="The effect to be used for the transition">
+			<option value="linear">linear</option>
+			<option value="Quad.easeOut">Quad.easeOut</option>
+			<option value="Quad.easeIn">Quad.easeIn</option>
+			<option value="Quad.easeInOut">Quad.easeInOut</option>
+			<option value="Cubic.easeOut">Cubic.easeOut</option>
+			<option value="Cubic.easeIn">Cubic.easeIn</option>
+			<option value="Cubic.easeInOut">Cubic.easeInOut</option>
+			<option value="Quart.easeOut">Quart.easeOut</option>
+			<option value="Quart.easeIn">Quart.easeIn</option>
+			<option value="Quart.easeInOut">Quart.easeInOut</option>
+			<option value="Quint.easeOut">Quint.easeOut</option>
+			<option value="Quint.easeIn">Quint.easeIn</option>
+			<option value="Quint.easeInOut">Quint.easeInOut</option>
+			<option value="Expo.easeOut">Expo.easeOut</option>
+			<option value="Expo.easeIn">Expo.easeIn</option>
+			<option value="Expo.easeInOut">Expo.easeInOut</option>
+			<option value="Circ.easeOut">Circ.easeOut</option>
+			<option value="Circ.easeIn">Circ.easeIn</option>
+			<option value="Circ.easeInOut">Circ.easeInOut</option>
+			<option value="Sine.easeOut">Sine.easeOut</option>
+			<option value="Sine.easeIn">Sine.easeIn</option>
+			<option value="Sine.easeInOut">Sine.easeInOut</option>
+			<option value="Back.easeOut">Back.easeOut</option>
+			<option value="Back.easeIn">Back.easeIn</option>
+			<option value="Back.easeInOut">Back.easeInOut</option>
+			<option value="Bounce.easeOut">Bounce.easeOut</option>
+			<option value="Bounce.easeIn">Bounce.easeIn</option>
+			<option value="Bounce.easeInOut">Bounce.easeInOut</option>
+			<option value="Elastic.easeOut">Elastic.easeOut</option>
+			<option value="Elastic.easeIn">Elastic.easeIn</option>
+			<option value="Elastic.easeInOut">Elastic.easeInOut</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="tabs_position" type="list" default="top" label="Tabs Position" description="Where make the tabs to appear">
+			<option value="top">Top</option>
+			<option value="bottom">Bottom</option>
+			<option value="hidden">Hidden</option>
+		</param>
+		<param name="tabs_title" type="list" default="content" label="Tabs Title" description="Choose one of the way you want your Tabs title are set.&lt;br&gt;&lt;strong&gt;By Content Title:&lt;/strong&gt; uses the Title assigned when creating the content.&lt;br&gt;&lt;strong&gt;By First Content h6 tag:&lt;/strong&gt; searches for the first h6 tag in your content and use its value as Tab Title (you can hide or show h6 in the content from the option below).&lt;br&gt;&lt;strong&gt;By Incremental:&lt;/strong&gt; set the Tabs title by the 'Incremental prepend text' option below and then append incremental values (i.e. Tab 1 | Tab 2 | Tab 3).">
+			<option value="content">By Content Title</option>
+			<option value="h6">By First Content h6 tag</option>
+			<option value="incremental">By Incremental</option>
+		</param>
+		<param name="tabs_incremental" type="text" default="Tab " label="Incremental prepend text" description="The prepend text to be used when Incremental Tabs Title is set" />
+		<param name="tabs_hideh6" type="radio" default="1" label="Hide h6 tags?" description="Whether to hide or not h6 tags when used as Tabs Titles">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="autoplay" type="radio" default="0" label="Autoplay" description="Whether to autoplay RokTabs or no">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<params name="autoplay_delay" type="text" default="2000" label="Autoplay Delay (ms)" description="Amount in milliseconds for the autoplay to change. Default 2secs (2000ms)" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+	<params group="advanced">
+		<param name="cache" type="hidden" default="0"/>
+		<param name="module_cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+</install>

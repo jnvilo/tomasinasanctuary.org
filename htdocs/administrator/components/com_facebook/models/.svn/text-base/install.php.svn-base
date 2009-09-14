@@ -1,0 +1,141 @@
+<?php
+/**
+ * Install Model
+ *
+ * @version		$Id$
+ * @package 	Joomla-Facebook
+ * @link 		http://joomlacode.org/gf/project/joomla-facebook/
+ * @license		GNU/GPL, see LICENSE.php
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+
+// Check to ensure this file is included in Joomla!
+defined( '_JEXEC' ) or die();
+
+jimport('joomla.installer.installer'); 
+
+class FacebookModelInstall extends JModel
+{
+	var $installpath;
+	function FacebookModelInstall( $config = array() )
+	{
+		$this->installpath 	= JPATH_ADMINISTRATOR.DS.'components'.DS.'com_facebook'.DS.'install';
+		parent::__construct( $config );
+	}
+	function install( $path )
+	{
+		$installer 		= new JInstaller();
+		return $installer->install( $path );
+	}
+	function uninstall( $path )
+	{
+		$installer 		= new JInstaller();
+		$manifest		= $this->getmanifestObject( $path );
+		$manifestdata	= &$this->extractManifestData( $manifest );
+		$cidlist		= &$this->getCIDList( $manifestdata );
+		foreach($cidlist as $id){
+			$installer->uninstall( $manifestdata['type'], $id['id'], $id['client_id'] );
+		}
+	}	
+	function enable( $path )
+	{
+		$manifest		= $this->getmanifestObject( $path );
+		$manifestdata	= &$this->extractManifestData( $manifest );
+		if($manifestdata['type']=='template') {
+			return $this->_enableTemplate($path);
+		}
+		switch($manifestdata['type']) {
+			case 'plugin':
+				$query	= 'UPDATE #__plugins SET published=1 WHERE element="'.$manifestdata['iname'].'" AND folder="'.$manifestdata['group'].'"';
+				break;
+			case 'module':
+				$query	= 'UPDATE #__modules SET published=1 WHERE module="'.	$manifestdata['iname'].'"';
+				break;
+		}
+		$db = &JFactory::getDBO();
+		$db->setQuery( $query );
+		$db->query();
+	}
+	function _enableTemplate( $path )
+	{
+		$manifestdata	= &$this->getManifestData( $path );
+		//TODO: Add Template Config Enable
+	}
+	function getToInstallList()
+	{
+		include($this->installpath.DS.'list.php');
+		foreach($list as $val) {
+			$newlist[]=$this->installpath.DS.$val;
+		}
+		return $newlist;
+	}
+	function getManifestObject($path) 
+	{
+		$installer 		= new JInstaller();
+		$installer->setPath( 'source', $path );
+		if(!$installer->setupInstall()) {
+			return null;
+		}
+		$manifest 		= &$installer->getManifest();
+		return $manifest;
+	}
+	function getCIDList( &$manifestdata )
+	{	
+		if($manifestdata['type']=='template') {
+			return array( 'id'=>$manifestdata['readname'], 'client_id'=>0 );
+		}
+		switch($manifestdata['type']) {
+			case 'plugin':
+				$query = 'SELECT id,client_id FROM #__plugins WHERE element="'.$manifestdata['iname'].'" AND folder="'.$manifestdata['group'].'"';
+				break;
+			case 'module':
+				$query = 'SELECT id,client_id FROM #__modules WHERE module="'.$manifestdata['iname'].'"';
+				break;
+		}
+		$db = &JFactory::getDBO();
+		$db->setQuery( $query );
+		$db->query();
+		return $db->loadAssocList();
+	}
+	function extractManifestData( $manifest )
+	{
+		$document	= &$manifest->document;
+		$manifestdata['version'] 		= $document->getElementByPath( 'version' )->data();
+		$manifestdata['description'] 	= $document->getElementByPath( 'description' )->data();
+		$manifestdata['readname'] 		= $document->getElementByPath( 'name' )->data();
+		$manifestdata['group'] 			= $document->attributes( 'group' );
+		$manifestdata['type']			= $document->attributes( 'type' );
+		if($manifestdata['type']=='module'||$manifestdata['type']=='plugin') {
+			foreach ($document->getElementByPath( 'files' )->children() as $file) {
+				if ($file->attributes( $manifestdata['type'] )) {
+					$manifestdata['iname'] = $file->attributes( $manifestdata['type'] );
+					break;
+				}
+			}
+		}
+		if($manifestdata['type']=='module') {
+			$manifestdata['name']=$manifestdata['iname'];
+		} else if($manifestdata['type']=='plugin') {
+			$manifestdata['name']='plg'.ucfirst($manifestdata['group']).ucfirst($manifestdata['iname']);
+		} else if($manifestdata['type']=='template') {
+			$manifestdata['name']='tmpl'.ucfirst($manifestdata['readname']);
+		}
+		$manifestdata['require']=JFile::exists($this->installpath.DS.$manifestdata['name'].DS.'require');		
+		$cid=$this->getCIDList( $manifestdata );
+		$manifestdata['installed']=intval(count($cid)!=0);
+		return $manifestdata;
+	}
+
+}

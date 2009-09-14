@@ -1,0 +1,17 @@
+/*
+// "Frontpage Slideshow" Module for Joomla! 1.5.x - Version 2.0.0
+// Copyright (c) 2006 - 2008 JoomlaWorks. All rights reserved.
+// This code cannot be redistributed without permission from JoomlaWorks - http://www.joomlaworks.gr.
+// More info at http://www.joomlaworks.gr and http://www.frontpageslideshow.net
+// Designed and developed by the JoomlaWorks team
+// ***Last update: September 1st, 2008***
+*/
+
+.fpss-introtext {_background:#222;}
+#navi-outer {_width:100%;}
+#navi-outer ul {_background:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/modules/mod_fpss/mod_fpss/templates/Default/corner.png', sizingMethod='crop');}
+#navi-outer li a span.navbar-key {padding:0 0 0 1px;width:18px;display:block;overflow:hidden;cursor:pointer;}
+.fpss-clr {display:none;}
+
+/* --- Generic Styling (highly recommended) --- */
+a:active,a:focus {outline:expression(hideFocus='true');}

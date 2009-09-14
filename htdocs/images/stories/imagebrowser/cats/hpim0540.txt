@@ -1,0 +1,1 @@
+Ok I took the shitty Phoca Gallery code and rewrote it so that Melaine can add some comments on the cat images that she uploads. For example this could be updated by her to say something about this cat. Also she can have multiple categories, like \"Cats For Adoption\", \"Cute Cats\" \"All Cats\" \" etc.

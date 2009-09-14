@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!-- $Id$ -->
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD plugin 1.0//EN" "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install version="1.5" type="plugin" group="facebook">
+	<name>Facebook - Link to full version home page</name>	<creationDate>$LastChangedDate$</creationDate>
+	<author>Witchakorn Kamolpornwijit</author>
+	<authorEmail>chalet16@gmail.com</authorEmail>
+	<authorUrl>whyworldhot.com</authorUrl>
+	<copyright>(C) 2007 Witchakorn Kamolpornwijit. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>0.10</version>
+	<description>Display link in Facebook applications to full version home page.</description>
+	<files>
+		<filename plugin="fulllink">fulllink.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_facebook_fulllink.ini</language>
+		<language tag="th-TH">th-TH.plg_facebook_fulllink.ini</language>
+	</languages> 
+</install>

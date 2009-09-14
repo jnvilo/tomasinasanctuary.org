@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="2.0.3" method="upgrade">
+	<name>ArtCats 2.0.3</name>
+	<author>Omar Ramos</author>
+	<creationDate>April 25 2009</creationDate>
+	<copyright>(C) 2008-09 Omar Ramos, Imperial Valley College. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>orware@gmail.com</authorEmail>
+	<authorUrl>www.imperial.edu</authorUrl>
+	<version>2.0.3</version>
+	<description>ArtCats is a module that can list Articles from within a designated Category or can list Categories from within a designated Section. Compatible only with Joomla 1.5 and later. Please TURN MODULE TITLE OFF if using Both Mode (change module parameters for title instead please), if using only one of the modes turn the module title on. Now comes with a new Sitemap Mode and a JavaScript powered Expandable Mode. You can create a custom .css file for the template you use and submit it to me for inclusion with ArtCats. Subcategories support requires my subcategory patches to Joomla, which can be found at www.joomla-subcats.com. Please see CHANGELOG for additional changes or www.joomla-artcats.com.</description>
+	<files>
+		<filename module="mod_artcats">mod_artcats.php</filename>
+      		<filename>helper.php</filename>
+			<filename>params.php</filename>
+      		<filename>mod_artcats.xml</filename>
+      		<filename>index.html</filename>
+            <folder>tmpl</folder>
+	</files>
+	<params>
+		<param name="mode" type="radio" default="both" label="Module Mode" description="Select which mode you'd like the module to use. Feel free to mix things up with all of the options. If you break something, send me a screenshot of your ArtCats configuration and the error in the frontend.">
+			<option value="articles">Articles</option>
+            <option value="categories">Categories</option>
+			<option value="both">Both</option>
+            <option value="expandable">Expandable</option>
+            <option value="sitemap">Sitemap</option>
+            <option value="archive">Archive</option>
+		</param>
+		<param name="automatic" type="radio" default="1" label="Automatic Mode" description="If set to On then this module will automatically use the current URL to pull out the Articles related to a Category when you visit a Category page when set to Articles Mode. If set to Off then this module will not show any Articles when you visit a Category page. Set to no if you'd only like to only use this module for particular Categories. When set to no you will be able to use the Category parameter below to choose the Category which you'd like to display Articles from. (When set to Categories Mode the above remains true, except replace Articles with Categories and Category with Section when you think about it.">
+			<option value="1">On</option>
+            <option value="0">Off</option>
+		</param>
+        <param name="show_on_articles" type="radio" default="1" label="Show up on article pages?" description="If set to yes then this module will automatically display a list of the other Articles in the current Category when you visit an Article page when set to Yes. If set to No, then this module will not show a list of Articles when visiting an article page. Only applicable when Auto Mode is turned On.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="show_on_categories" type="radio" default="1" label="Show up on category pages?" description="If set to yes then this module will automatically display a list of the other Categories in the current Section when you visit a Category page when set to Yes. If set to No, then this module will not show a list of Categories when visiting a Category page. Only applicable when Auto Mode is turned On.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="show_article_count" type="radio" default="1" label="Show Category article count?" description="If set to yes then this module will automatically append the Article Count for a Category to the end of the Category name.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="show_empty_categories" type="radio" default="0" label="Show Empty Categories?" description="Show or hide categories that have no articles.">
+            <option value="1">Show</option>
+            <option value="0">Hide</option>
+        </param>
+        <param name="combine" type="radio" default="0" label="Combine Category and Article Lists?" description="This makes ArtCats create a combined list with the Categories as the First Level items and the Articles as the subitems. The subitems will only show up if you are visiting that particular Category. When subcategories support is enabled Categories can also be subitems, along with their associated article lists. This parameter is only applicable when the user has chosen Categories Mode or Both Mode (in Expandable Mode this feature is always enabled).">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="subcategories" type="radio" default="0" label="Enable subcategories support?" description="This feature enables subcategories support for the lists generated by the module. Joomla Subcategories Support is a new feature that I've been working on, please visit www.joomla-subcats.com to download the Joomla Patches.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="articles_mode_title" type="text" default="Articles" label="Articles Mode Title" description="This will be the title used for the module on pages when Articles are shown." />
+        <param name="categories_mode_title" type="text" default="Categories" label="Categories Mode Title" description="This will be the title used for the module on pages when Categories are shown." />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="catid" type="category" default="0" label="Category to Show Articles From" description="Category from which Articles will be listed. Only applicable for Articles Mode with Auto Mode turned Off."/>
+        <param name="sectionid" type="section" default="0" label="Section to Show Categories From" description="Section from which Categories will be listed. Only applicable for Categories Mode with Auto Mode turned Off."/>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="count" type="text" default="all" label="Count" description="The number of articles to display (default is 5). Use 0 or 'all' to display all results." />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module class CSS suffix" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="art_order" type="list" default="ordering" label="Article Field to Order By" description="Select which field you'd like Articles to be ordered by.">
+			<option value="hits">Hits</option>
+			<option value="title">Title</option>
+			<option value="id">ID</option>
+			<option value="ordering">Joomla Ordering</option>
+		</param>
+		<param name="art_order_type" type="list" default="" label="Article Order Type" description="Select whether you'd like the field you chose above to be organized in Ascending or Descending order.">
+			<option value="">Ascending</option>
+			<option value="DESC">Descending</option>
+		</param>
+		<param name="cat_order" type="list" default="ordering" label="Category Field to Order By" description="Select which field you'd like Categories to be ordered by.">
+			<option value="title">Title</option>
+			<option value="id">ID</option>
+			<option value="ordering">Joomla Ordering</option>
+		</param>
+		<param name="cat_order_type" type="list" default="" label="Category Order Type" description="Select whether you'd like the field you chose above to be organized in Ascending or Descending order.">
+			<option value="">Ascending</option>
+			<option value="DESC">Descending</option>
+		</param>	
+        <param name="@spacer" type="spacer" default="" label="" description="" />	
+		<param name="tmpl" type="filelist" default="menustyle" directory="modules/mod_artcats/tmpl" filter=".php" exclude="index.html" stripext=".php" label="Template Type" description="List of Templates Types to Choose From. Note, some will only work correctly when the proper mode has been selected." />
+        <param name="defaultstyle_tmpl" type="filelist" default="default" directory="modules/mod_artcats/tmpl/css/default" filter=".css" exclude="index.html" label="Default Template" description="List of Default Templates to Choose From. To create your own, just create a new CSS file in the mod_artcats/tmpl/css/default folder." />
+        <param name="menustyle_tmpl" type="filelist" default="default" directory="modules/mod_artcats/tmpl/css/menustyle" filter=".css" exclude="index.html" label="Menustyle Template" description="List of Menustyle Templates to Choose From. To create your own, just create a new CSS file in the mod_artcats/tmpl/css/menustyle folder." />
+        <param name="expandable_tmpl" type="filelist" default="default" directory="modules/mod_artcats/tmpl/css/expandable" filter=".css" exclude="index.html" label="Expandable Template" description="List of Expandable Templates to Choose From. To create your own, just create a new CSS file in the mod_artcats/tmpl/css/expandable folder." />
+        <param name="expandable_id" type="text" default="artcats" label="HTML ID for Expandable Mode" description="This setting is needed so that you can have multiple instances of this module on one page (each one needs a unique ID)." />
+        <param name="sitemap_tmpl" type="filelist" default="default" directory="modules/mod_artcats/tmpl/css/sitemap" filter=".css" exclude="index.html" label="Sitemap Template" description="List of Sitemap Templates to Choose From. To create your own, just create a new CSS file in the mod_artcats/tmpl/css/sitemap folder." />
+        <param name="archive_tmpl" type="filelist" default="default" directory="modules/mod_artcats/tmpl/css/archive" filter=".css" exclude="index.html" label="Archive Template" description="List of Archive Templates to Choose From. To create your own, just create a new CSS file in the mod_artcats/tmpl/css/archive folder." />
+        <param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="article_view_type" type="list" default="blog" label="Article View Type" description="Select which article view type you would like the URLs generated by ArtCats to create. The second option will generate links that will take users straight to the edit article page.">
+            <option value="default">Article</option>
+            <option value="form">Edit Article</option>
+        </param>
+        <param name="category_view_type" type="list" default="blog" label="Category View Type" description="Select which category view type you would like the URLs generated by ArtCats to create.">
+            <option value="blog">Blog</option>
+            <option value="default">List</option>
+        </param>
+	</params>
+
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+</install>

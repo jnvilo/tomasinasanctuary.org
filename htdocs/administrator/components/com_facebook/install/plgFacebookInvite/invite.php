@@ -1,0 +1,54 @@
+<?php
+/**
+ * plgFacebookInvite
+ *
+ * 
+ * @version		$Id: invite.php 56 2008-03-22 02:52:23Z chalet16 $
+ * @package 	Joomla-Facebook
+ * @link 		http://joomlacode.org/gf/project/joomla-facebook/
+ * @license		GNU/GPL, see LICENSE.php
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+ 
+// Check to ensure this file is included in Joomla!
+defined( '_JEXEC' ) or die();
+
+jimport( 'joomla.event.plugin' );
+
+class plgFacebookInvite extends JPlugin
+{
+	function plgFacebookInvite( &$subject, $config )
+	{
+		parent::__construct( $subject, $config );
+		$this->_plugin = &JPluginHelper::getPlugin( 'facebook', 'invite' );
+		$this->_params = new JParameter( $this->_plugin->params );
+		$lang =& JFactory::getLanguage(); 
+		$lang->load( 'plg_facebook_invite' , JPATH_ADMINISTRATOR );
+	}
+	function onFacebookPage( $page, &$class )
+	{		
+		global $mainframe;
+		$facebook=&JoomlaFacebook::getFacebookPlatform();
+		$class->addMenu('invite',JText::_('INVITE'),'invite','right',10);
+		$invitetext=$this->_params->get('invitetext','');
+		$invitetext.='<fb:req-choice url="http://apps.facebook.com/"'.JoomlaFacebook::getAppname().' label='.JText::_('VISITSITE').'>';
+		$invitetext=str_replace('SITENAME',$mainframe->getCfg('sitename'),$invitetext);
+		if($page=='invite') {
+			$class->addContent('<fb:request-form method="post" content="'.htmlentities($invitetext).'" type="'.htmlentities($mainframe->getCfg('sitename')).'" invite="false" action="http://app.facebook.com/joomlatest"><fb:multi-friend-selector actiontext="'.JText::_('INVITETITLE').'" bypass="cancel"/></fb:request-form>',0);		
+	}
+		return true;
+	}
+}
+

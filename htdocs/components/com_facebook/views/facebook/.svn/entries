@@ -1,0 +1,45 @@
+8
+
+dir
+56
+http://joomlacode.org/svn/joomla-facebook/development/truck/site/views/facebook
+http://joomlacode.org/svn/joomla-facebook
+
+
+
+2008-03-12T02:21:01.052595Z
+36
+chalet16
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+fcad6066-9943-0410-9e70-ae682a4c84f6
+
+tmpl
+dir
+
+view.fbml.php
+file
+
+
+
+
+2008-03-20T04:53:45.000000Z
+716c24b362efbc541af60110410cfecf
+2008-03-12T02:21:01.052595Z
+36
+chalet16
+has-props
+has-prop-mods
+

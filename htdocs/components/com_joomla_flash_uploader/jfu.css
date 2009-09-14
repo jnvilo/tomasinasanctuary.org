@@ -1,0 +1,6 @@
+.noflash { padding:10px; margin:10px; border: 1px solid #555555; background-color: #f8f8f8; text-align:center; width:330px; }
+div.flashcontent { padding:0;margin:0;border:none;}
+.error { color:#FF0000; }
+.errordiv { padding:10px; margin:10px; border: 1px solid #555555;color: #000000;background-color: #f8f8f8; text-align:center; width:360px; }
+.w250 { width:250px; }
+.w230 { width:230px; }

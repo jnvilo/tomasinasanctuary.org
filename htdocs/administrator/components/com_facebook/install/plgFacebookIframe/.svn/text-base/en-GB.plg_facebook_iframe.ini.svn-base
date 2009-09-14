@@ -1,0 +1,7 @@
+# plgFacebookIframe
+# Author: Witchkorn Kamolpornwijit
+# License: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Note: All ini files need to be saved as UTF-8 - No BOM
+HOME=Home
+PARAMLBLTHEME=Theme
+PARAMDESTHEME=Joomla! Client Theme to use in Facebook application 

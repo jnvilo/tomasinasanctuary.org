@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: config.xml 36 2008-03-12 02:21:01Z chalet16 $ -->
+<config>
+	<params>
+		<param name="enable" type="list" default="0" label="PARAMLBLENABLE" description="PARAMDESENABLE">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="apikey" type="text" default="" label="PARAMLBLAPIKEY" description="PARAMDESAPIKEY" />
+		<param name="secretkey" type="text" default="" label="PARAMLBLSECRETKEY" description="PARAMDESSECRETKEYY" />
+		<param name="appname" type="text" default="" label="PARAMLBLAPPNAME" description="PARAMDESAPPNAME" />
+
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="requirelogin" type="list" default="0" label="PARAMLBLREQUIRELOGIN" description="PARAMDESREQUIRELOGIN">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</config>

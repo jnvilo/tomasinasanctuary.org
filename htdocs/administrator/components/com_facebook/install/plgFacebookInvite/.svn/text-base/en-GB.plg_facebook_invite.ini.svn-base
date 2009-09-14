@@ -1,0 +1,7 @@
+# plgFacebookInvite
+# Author: Witchkorn Kamolpornwijit
+# License: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+# Note: All ini files need to be saved as UTF-8 - No BOM
+INVITETITLE=Invite your friends to visit this site
+PARAMLBLINVITE=Invite FBML message
+PARAMDESINVITE=SITENAME for Joomla! Site name FROM for name of user that send invite

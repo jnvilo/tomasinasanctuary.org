@@ -1,0 +1,110 @@
+.noflash { padding:10px; margin:10px; border: 1px solid #555555; background-color: #f8f8f8; text-align:center; width:330px; }
+div.flashcontent { padding:0;margin:0;border:none;}
+table.adminform tr { vertical-align:top; padding-left:5px; }
+.config table.adminlist tr { vertical-align:top; padding-left:5px; }
+.odd{background-color: #f3f3f3;}
+.even{} 
+.error { color:#FF0000;  }
+.errordiv { padding:10px; margin:10px; border: 1px solid #555555;color: #000000;background-color: #f8f8f8; text-align:center; width:360px; }
+.w50 { width:50px; }
+.w250 { width:250px; }
+.w230 { width:230px; }
+
+.form-block-menu {
+	border: 1px solid #cccccc;
+	background: #eeeeee;
+	padding-top: 6px;
+	padding-left: 5px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+	margin:0px;
+	display:inline;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.form-block-menu:hover {
+	border-top: 2px solid #ff0000;
+}
+
+.form-block-menu-sel {
+    position:relative;
+    z-index:2;
+	border: 1px solid #cccccc;
+	background: #ffffff;
+	padding-top: 6px;
+	padding-left: 5px;
+	padding-bottom: 6px;
+	padding-right: 5px;
+	margin:0px;
+	display:inline;
+	font-weight: bold;
+	border-top: 2px solid #ff0000;
+	border-bottom: 1px solid #ffffff;
+} 
+
+
+.block-menu {
+text-align:left;
+width:100%;
+padding-top:8px;
+padding-bottom:6px;
+border-bottom: 1px solid #cccccc;
+}
+
+.redreg {
+color: #ff0000;
+font-size: 9pt;
+font-weight: normal;
+text-align:left;
+padding-bottom:5px;
+}
+
+p.imglist img, p.imglist .text
+{
+vertical-align: middle;
+}
+
+table.admintable thead th
+{
+height:28px;
+text-align: center;
+background-color: #f0f0f0;
+background-image: none;
+background-repeat: repeat;
+background-attachment: scroll;
+background-position: 0% 0%;
+color: #666666;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: #999999;
+border-left-width-value: 1px;
+border-left-style-value: solid;
+border-left-color-value: #ffffff;
+}
+
+table.admintable td {
+ vertical-align: top;
+}
+
+.icon-32-user
+{
+background-image: url(images/user_f2.png);
+}
+
+.jfu_nocheck
+{
+color: #FF7F00;
+}
+
+.jfu_old
+{
+color: #ff0000;
+}
+
+.jfu_current
+{
+color: #339900;
+}
+
+

@@ -1,0 +1,15 @@
+/*
+// "Frontpage Slideshow" Module for Joomla! 1.5.x - Version 2.0.0
+// Copyright (c) 2006 - 2008 JoomlaWorks. All rights reserved.
+// This code cannot be redistributed without permission from JoomlaWorks - http://www.joomlaworks.gr.
+// More info at http://www.joomlaworks.gr and http://www.frontpageslideshow.net
+// Designed and developed by the JoomlaWorks team
+// ***Last update: September 1st, 2008***
+*/
+
+.fpss-introtext {_background:#222;}
+.fpss-introtext .slidetext h1 {line-height:30px;}
+.fpss-clr {display:none;}
+
+/* --- Generic Styling (highly recommended) --- */
+a:active,a:focus {outline:expression(hideFocus='true');}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>RokWeather</name>
+	<author>RocketTheme</author>
+	<creationDate>April 2008</creationDate>
+	<copyright>Copyright (C) 2005 - 2008 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>www.rockettheme.com</authorUrl>
+	<version>0.4</version>
+	<description>RokWeather is a weather module based on Google data</description>
+	<files>
+		<filename module="mod_rokweather">mod_rokweather.php</filename>
+		<filename>googleweather.class.php</filename>
+		<filename>rokweather.css</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>images/</folder>
+		<folder>grey/</folder>
+		<folder>blue/</folder>
+		<folder>tmpl/</folder>
+	</files>
+	<params>
+		<param name="default_location" type="text" default="Golden, CO" label="Default Location" description="Valid location or US ZIP code" />
+		<param name="default_degree" type="radio" default="0" label="Default Degree Type" description="The default Degree Type to use">
+			<option value="1">°C</option>
+			<option value="0">°F</option>			
+		</param>
+		<param name="enable_cache" type="radio" default="1" label="Location Caching" description="Enable location cache">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="enable_location_cookie" type="radio" default="1" label="Enable Location Cookie" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="enable_icon" type="radio" default="1" label="Enable Icon Display" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="enable_humidity" type="radio" default="1" label="Enable Humidity Display" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="enable_wind" type="radio" default="0" label="Enable Wind Display" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="enable_forecast" type="radio" default="1" label="Enable 4 Day Forecast" description="">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="forcast_show" type="list" default="4" label="Forecast items to show" description="">
+			<option value="1">1 day</option>
+			<option value="2">2 days</option>
+			<option value="3">3 days</option>
+			<option value="4">4 days</option>
+		</param>
+	</params>
+	<params group="advanced">
+		<param name="cache" type="hidden" default="0"/>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+</install>

@@ -1,0 +1,44 @@
+.artcats, .artcats ul{
+	list-style:none;
+	margin-left:16px;
+}
+.artcats .contract{
+	display: block;
+}
+.artcats .expand{
+	display: none;
+}
+.artcats ul{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.artcats li{
+    padding-bottom:.1em !important;
+}
+
+.artcats a{
+}
+
+.artcats a:hover{
+}
+
+.artcats .sitemap{
+    padding-left:0 !important;
+    background-image:none !important;
+}
+
+.artcats .sitemap img{
+	cursor: pointer;
+	margin-right:5px;
+}
+
+.artcats a.active {
+	font-weight: bold;
+}
+
+.artcats .expandAll, 
+.artcats .collapseAll {
+	font-weight:bold;
+	background-image:none;
+}
