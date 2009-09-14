@@ -32,8 +32,8 @@ class JConfig {
 	var $ftp_root = '/htdocs';
 	var $dbtype = 'mysql';
 	var $host = 'localhost';
-	var $user = 'tomasina';
-	var $db = 'tomasinatesting';
+	var $user = 'XXXXXXXXXXXXX';
+	var $db = 'XXXXXXXXXXXXXXX';
 	var $dbprefix = 'jos_';
 	var $mailer = 'mail';
 	var $mailfrom = 'jnvilo@gmail.com';
@@ -47,7 +47,7 @@ class JConfig {
 	var $MetaTitle = '1';
 	var $lifetime = '60';
 	var $session_handler = 'none';
-	var $password = 'tomasina';
+	var $password = xxxxxxxxxxxxxxxxxxxx'';
 	var $sitename = 'tomasinasanctuary.org';
 	var $MetaDesc = 'TomasinaSanctuary - A website about the Tomasina Sanctuary for lost and abandoned animals.';
 	var $MetaKeys = 'cats, dogs, sanctuary';
