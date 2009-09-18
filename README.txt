@@ -1,0 +1,1 @@
+This is the code used for tomasinasanctuary.org. It is just joomla but with a lot of components and modules.
